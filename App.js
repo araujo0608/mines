@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
 import params from './src/params';
 import Field from './src/components/Field';
 
@@ -9,6 +10,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <FontAwesome name="sliders" size={30} color="blue" />
       <Text>MINE GAME</Text>
       <Text>Grid size: {rows} x {columns}</Text>
       <Field mined={true} opened={true} nearMines={8} exploded={false}/>
