@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import params from './src/params';
+import Field from './src/components/Field';
 
 export default function App() {
   const columns = params.getColumnsAmount();
@@ -10,6 +11,8 @@ export default function App() {
     <View style={styles.container}>
       <Text>MINE GAME</Text>
       <Text>Grid size: {rows} x {columns}</Text>
+      <Field mined={true} opened={true} nearMines={8} exploded={false}/>
+      <Field flagged/>
     </View>
   );
 }
